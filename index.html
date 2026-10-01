@@ -3,16 +3,17 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Juan David Campos G. — AV Villas</title>
+  <title>Juan David Campos G. — Lulo Bank</title>
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@tabler/icons-webfont@2.44.0/tabler-icons.min.css" />
   <!-- Open Graph / WhatsApp / redes -->
 <meta property="og:type"        content="website" />
-<meta property="og:url"         content="https://juan-campos-av-villas.vercel.app/" />
+<meta property="og:url"         content="https://juan-campos-virtual-card.vercel.app" />
 <meta property="og:title"       content="Juan David Campos G. · Ejecutivo Comercial" />
 <meta property="og:description" content="Soluciones Financieras" />
-<meta property="og:image"       content="https://juan-campos-av-villas.vercel.app/JuanCampos-AV-Villas.png" />
+<meta property="og:image"       content="https://juan-campos-virtual-card.vercel.app/JuanCampos-AV-Villas.png" />
 <meta property="og:image:width" content="400" />
 <meta property="og:image:height"content="400" />
+
   <style>
     *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
     body {
@@ -20,61 +21,77 @@
       display: flex;
       justify-content: center;
       align-items: center;
-      background: #f0f0f0;
+      background: #1a1a1a;
       font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
       padding: 2rem 1rem;
     }
     .card {
       width: 340px;
       border-radius: 20px;
-      background: #fff;
-      box-shadow: 0 6px 32px rgba(0,0,0,0.13);
+      background: #141414;
+      box-shadow: 0 6px 40px rgba(0,0,0,0.5);
       overflow: hidden;
+      border: 1px solid #2a2a2a;
     }
 
     /* HEADER */
     .card-header {
-      background: #C8102E;
+      background: #0D0D0D;
       padding: 24px 20px 16px;
       display: flex;
       align-items: flex-start;
       gap: 14px;
       position: relative;
     }
-    .header-logo img {
-      width: 90px;
-      display: block;
+    .header-brand {
+      padding-top: 4px;
     }
-    .header-info { flex: 1; padding-top: 4px; }
+    .brand-name {
+      font-size: 20px;
+      font-weight: 800;
+      color: #C6F135;
+      letter-spacing: -0.03em;
+      line-height: 1;
+      margin-bottom: 2px;
+    }
+    .brand-sub {
+      font-size: 10px;
+      color: rgba(255,255,255,0.35);
+      text-transform: uppercase;
+      letter-spacing: 0.1em;
+    }
+    .header-info {
+      flex: 1;
+      text-align: right;
+      padding-top: 4px;
+    }
     .name {
       color: #fff;
-      font-size: 16px;
+      font-size: 15px;
       font-weight: 700;
       margin: 0 0 3px;
       line-height: 1.2;
     }
     .cargo {
-      color: rgba(255,255,255,0.85);
-      font-size: 11px;
+      color: #C6F135;
+      font-size: 10.5px;
       font-weight: 500;
       text-transform: uppercase;
       letter-spacing: 0.06em;
       margin: 0 0 3px;
     }
     .banco-sub {
-      color: rgba(255,255,255,0.6);
-      font-size: 12px;
+      color: rgba(255,255,255,0.35);
+      font-size: 11px;
     }
 
     /* CURVA */
-    .header-curve {
-      display: block;
-      width: 100%;
-      margin-top: -1px;
-      background: #C8102E;
+    .curve-container {
+      position: relative;
+      background: #0D0D0D;
       line-height: 0;
     }
-    .header-curve svg {
+    .curve-container svg {
       display: block;
       width: 100%;
     }
@@ -88,10 +105,10 @@
       width: 90px;
       height: 90px;
       border-radius: 50%;
-      border: 4px solid #fff;
+      border: 3px solid #C6F135;
       overflow: hidden;
-      background: #a00020;
-      box-shadow: 0 4px 16px rgba(0,0,0,0.18);
+      background: #222;
+      box-shadow: 0 0 20px rgba(198,241,53,0.25);
       z-index: 2;
     }
     .avatar-wrap img {
@@ -102,21 +119,9 @@
       display: block;
     }
 
-    /* CURVE CONTAINER: posición relativa para la foto */
-    .curve-container {
-      position: relative;
-      background: #C8102E;
-      line-height: 0;
-    }
-    .curve-container svg {
-      display: block;
-      width: 100%;
-    }
-
     /* BODY */
-    .card-body {
-      padding-top: 52px;
-    }
+    .card-body { padding-top: 52px; }
+
     .info-section {
       padding: 0 22px 4px;
       display: flex;
@@ -127,66 +132,73 @@
       align-items: center;
       gap: 10px;
       padding: 11px 0;
-      border-bottom: 0.5px solid #ebebeb;
+      border-bottom: 0.5px solid #2a2a2a;
       font-size: 14px;
-      color: #222;
+      color: #e0e0e0;
     }
     .info-row:last-child { border-bottom: none; }
     .info-row i {
       font-size: 18px;
-      color: #C8102E;
+      color: #C6F135;
       width: 20px;
       text-align: center;
       flex-shrink: 0;
     }
     .info-label {
-      color: #999;
+      color: #555;
       font-size: 10.5px;
       text-transform: uppercase;
       letter-spacing: 0.05em;
       margin-bottom: 2px;
     }
 
+    /* SERVICIOS */
     .services-section {
-      padding: 12px 22px 6px;
-      border-top: 0.5px solid #ebebeb;
+      padding: 14px 22px 6px;
+      border-top: 0.5px solid #2a2a2a;
     }
     .services-title {
-      font-size: 12px;
+      font-size: 11px;
       font-weight: 700;
-      color: #C8102E;
+      color: #C6F135;
       text-transform: uppercase;
-      letter-spacing: 0.06em;
+      letter-spacing: 0.08em;
       margin: 0 0 2px;
     }
     .services-subtitle {
       font-size: 12px;
-      color: #999;
-      margin: 0 0 8px;
+      color: #555;
+      margin: 0 0 10px;
     }
     .service-item {
       display: flex;
       align-items: center;
       gap: 10px;
       padding: 8px 0;
-      border-bottom: 0.5px solid #ebebeb;
+      border-bottom: 0.5px solid #2a2a2a;
       font-size: 13.5px;
-      color: #222;
+      color: #e0e0e0;
     }
     .service-item:last-child { border-bottom: none; }
     .service-item i {
       font-size: 17px;
-      color: #C8102E;
+      color: #C6F135;
       width: 20px;
       text-align: center;
       flex-shrink: 0;
     }
+    .service-item.highlight {
+      color: #C6F135;
+      font-weight: 600;
+    }
+    .service-item.highlight i { color: #C6F135; }
 
+    /* BOTONES */
     .btn-row {
       display: flex;
       gap: 10px;
       padding: 14px 22px 20px;
-      border-top: 0.5px solid #ebebeb;
+      border-top: 0.5px solid #2a2a2a;
     }
     .btn {
       flex: 1;
@@ -205,15 +217,16 @@
     }
     .btn:hover { opacity: 0.85; }
     .btn-wa { background: #25D366; color: #fff; }
-    .btn-contact { background: #C8102E; color: #fff; }
+    .btn-contact { background: #C6F135; color: #0D0D0D; }
     .btn i { font-size: 16px; }
 
+    /* FOOTER */
     .card-footer {
       padding: 8px 22px 14px;
       text-align: center;
       font-size: 11px;
-      color: #bbb;
-      border-top: 0.5px solid #ebebeb;
+      color: #333;
+      border-top: 0.5px solid #2a2a2a;
     }
   </style>
 </head>
@@ -221,24 +234,25 @@
   <div class="card">
 
     <div class="card-header">
-      <div class="header-logo">
-        <img src="av_villas_logo.png" alt="Banco AV Villas" />
+      <div class="header-brand">
+        <div class="brand-name">lulo bank</div>
+        <div class="brand-sub">Banco Digital</div>
       </div>
       <div class="header-info">
         <p class="name">Juan David Campos G.</p>
         <p class="cargo">Ejecutivo Comercial</p>
-        <p class="banco-sub">Banco AV Villas</p>
+        <p class="banco-sub">Lulo Bank · Colombia</p>
       </div>
     </div>
 
     <!-- Curva + foto flotante -->
     <div class="curve-container">
       <svg viewBox="0 0 340 60" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="none" height="60">
-        <path d="M0,0 L340,0 L340,20 Q170,70 0,20 Z" fill="#C8102E"/>
-        <path d="M0,20 Q170,70 340,20 L340,60 L0,60 Z" fill="#ffffff"/>
+        <path d="M0,0 L340,0 L340,20 Q170,70 0,20 Z" fill="#0D0D0D"/>
+        <path d="M0,20 Q170,70 340,20 L340,60 L0,60 Z" fill="#141414"/>
       </svg>
       <div class="avatar-wrap">
-        <img src="JuanCampos-AV-Villas.png" alt="Juan David Campos G." />
+        <img src="foto.png" alt="Juan David Campos G." />
       </div>
     </div>
 
@@ -264,20 +278,28 @@
         <p class="services-title">Soluciones financieras</p>
         <p class="services-subtitle">para personas y empresas</p>
         <div class="service-item">
-          <i class="ti ti-credit-card" aria-hidden="true"></i>
-          Tarjetas de crédito
+          <i class="ti ti-piggy-bank" aria-hidden="true"></i>
+          Cuenta de ahorro
         </div>
         <div class="service-item">
           <i class="ti ti-cash" aria-hidden="true"></i>
-          Crédito de libre inversión
+          Crédito libranza
+        </div>
+        <div class="service-item">
+          <i class="ti ti-credit-card" aria-hidden="true"></i>
+          Tarjeta de crédito
         </div>
         <div class="service-item">
           <i class="ti ti-arrows-exchange" aria-hidden="true"></i>
           Compra de cartera
         </div>
         <div class="service-item">
-          <i class="ti ti-users" aria-hidden="true"></i>
-          Apertura de cuentas de nómina
+          <i class="ti ti-shield-check" aria-hidden="true"></i>
+          Seguros
+        </div>
+        <div class="service-item highlight">
+          <i class="ti ti-star" aria-hidden="true"></i>
+          Tasa preferencial · Clientes Lulo Pro
         </div>
       </div>
 
@@ -293,7 +315,7 @@
       </div>
 
       <div class="card-footer">
-        Banco AV Villas · Entidad vigilada por la Superfinanciera
+        Lulo Bank · Entidad vigilada por la Superfinanciera
       </div>
     </div>
 
