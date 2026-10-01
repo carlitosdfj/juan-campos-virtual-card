@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>QR · Juan David Campos G.</title>
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+    body {
+      min-height: 100vh;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      background: #1a1a1a;
+      font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+      padding: 2rem 1rem;
+    }
+    .card {
+      width: 300px;
+      border-radius: 24px;
+      background: #0D0D0D;
+      border: 1px solid #2a2a2a;
+      box-shadow: 0 8px 40px rgba(0,0,0,0.6);
+      padding: 32px 28px 28px;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 20px;
+    }
+    .brand {
+      font-size: 22px;
+      font-weight: 800;
+      color: #C6F135;
+      letter-spacing: -0.03em;
+    }
+    .qr-wrap {
+      background: #0D0D0D;
+      border-radius: 16px;
+      padding: 4px;
+      border: 2px solid #C6F135;
+      box-shadow: 0 0 24px rgba(198,241,53,0.2);
+    }
+    .qr-wrap img {
+      width: 200px;
+      height: 200px;
+      display: block;
+      border-radius: 12px;
+    }
+    .info {
+      text-align: center;
+    }
+    .info .name {
+      color: #fff;
+      font-size: 15px;
+      font-weight: 700;
+      margin-bottom: 4px;
+    }
+    .info .cargo {
+      color: #C6F135;
+      font-size: 11px;
+      text-transform: uppercase;
+      letter-spacing: 0.07em;
+      margin-bottom: 2px;
+    }
+    .info .banco {
+      color: #444;
+      font-size: 11px;
+    }
+    .scan-label {
+      font-size: 12px;
+      color: #444;
+      text-align: center;
+      display: flex;
+      align-items: center;
+      gap: 6px;
+    }
+    .scan-label::before,
+    .scan-label::after {
+      content: '';
+      flex: 1;
+      height: 0.5px;
+      background: #2a2a2a;
+    }
+  </style>
+</head>
+<body>
+  <div class="card">
+    <div class="brand">lulo bank</div>
+
+    <div class="qr-wrap">
+      <img src="qr.png" alt="QR Tarjeta Virtual Juan David Campos" />
+    </div>
+
+    <div class="info">
+      <p class="name">Juan David Campos G.</p>
+      <p class="cargo">Ejecutivo Comercial</p>
+      <p class="banco">Lulo Bank · Colombia</p>
+    </div>
+
+    <div class="scan-label">Escanéame</div>
+  </div>
+</body>
+</html>
